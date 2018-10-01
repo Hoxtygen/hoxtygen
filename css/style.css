@@ -1,3 +1,7 @@
+/* * {
+	outline: 2px solid red;
+} */
+
 body		{
 	color: #222;
 	font-family: "Roboto", "Noto Sans";
@@ -7,7 +11,7 @@ body		{
 }
 
 a 		{
-	color: #fed123;
+	color: #fed136;
 }
 
 #portfolio * 	{
@@ -33,18 +37,22 @@ a 		{
 	height: 100%;
 	transition:  all ease .5s;
 	opacity: 0;
-	background: rgba(254, 209, 54, .9);
+	background: rgba(254, 209, 54, 0.9);
 }
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+	opacity: 1;
+  }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content		{
 	font-size: 20px;
 	position: absolute;
-	top: 50%;
+	 top: 50%;
 	width: 100%;
 	height: 20px;
 	margin-top: -12px;
 	text-align: center;
-	color: #fff;
+	color: #fff; 
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i 		{
@@ -52,13 +60,27 @@ a 		{
 }
 
 #portfolio .portfolio-item .portfolio-caption 		{
-	min-width: 400px;
+	max-width: 400px;
 	margin: 0 auto;
 	padding: 25px;
+	text-align: center;
+	background-color: #fff;
 }
 
 #portfolio .portfolio-item .portfolio-caption h4		{
 	margin: 0;
+	text-transform: none;
+}
+
+#portfolio .portfolio-item .portfolio-caption p 		{
+	font-size: 16px;
+	font-style: italic;
+	margin: 0;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#portfolio *		{
+	z-index: 2;
 }
 
 section h2.section-heading 		{
@@ -122,7 +144,7 @@ header.portfolio-header 		{
 	background-size: cover;
 	text-align: center;
 	min-height: 100vh;
-	color: #fff;
+	color: #ccc;
 }
 
 
@@ -157,6 +179,89 @@ header.portfolio-header 		{
 	#portfolio .portfolio-item 		{
 		margin:  0 0 30px;
 	}
+
+	.portfolio-modal {
+		padding-right: 0px !important;
+	}
+
+	.portfolio-modal .modal-dialog 		{
+		margin: 1rem;
+		max-width: 100vw;
+	}
+
+	.portfolio-modal .modal-content 		{
+		padding: 100px 0;
+		text-align: center;
+	}
+
+	.portfolio-modal .modal-content h2 		{
+		font-size: 3em;
+		margin-bottom: 15px;
+	} 
+
+	.portfolio-modal .modal-content p 		{
+		margin-bottom: 30px;
+	}
+
+	.portfolio-modal .modal-content p.item-intro 		{
+		font-size: 16px;
+		font-style: italic;
+		margin: 20px 0 30px;
+		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	}
+
+	.portfolio-modal .modal-content ul.list-inline 		{
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+
+	.portfolio-modal .modal-content img 		{
+		margin-bottom: 30px;
+	}
+
+	.portfolio-modal .modal-content button 		{
+		cursor: pointer;
+	}
+
+	.portfolio-modal .close-modal 		{
+		position: absolute;
+		top: 25px;
+		right: 25px;
+		width: 75px;
+		height: 75px;
+		cursor: pointer;
+		background: transparent;
+	}
+
+	.portfolio-modal .close-modal:hover 	{
+		opacity: 0.3;
+	}
+
+	.portfolio-modal .close-modal .lr 		{
+		/* Safari and Chrome */
+		z-index: 1051;
+		width: 1px;
+		height: 75px;
+		margin-left: 35px;
+		/* IE 9 */
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		background: #212529;
+	}
+
+	.portfolio-modal .close-modal .lr .rl 		{
+		/* Safari and Chrome */
+		z-index: 1052;
+		width: 1px;
+		height: 75px;
+		/* IE 9 */
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
+		background: #212529;
+	}
+	
 }
 
 @media (min-width: 992px) 		{
@@ -176,4 +281,30 @@ header.portfolio-header 		{
 	 #main-nav .navbar-nav .nav-item .nav-link 		{
 		padding: 1.1em;
 	} 
+
+	#main-nav.background-black 		{
+		background: #212529;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+footer 		{
+	padding: 25px 0;
+	text-align: center;
+}
+
+footer span.copyright 		{
+	font-size: 90%;
+	line-height: 40px;
+	text-transform: none;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer ul.quicklinks 		{
+	font-size: 90%;
+	line-height: 40px;
+	margin-bottom: 0;
+	text-transform: none;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
